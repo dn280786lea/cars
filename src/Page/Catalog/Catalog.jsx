@@ -16,6 +16,7 @@ const Catalog = () => {
         <form action="">
           <h3>Location</h3>
           <input
+            className="location_input"
             type="text"
             name="text"
             value={text}
