@@ -1,0 +1,56 @@
+.title {
+  font-weight: 900;
+  font-size: 100px;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 100px;
+  color: #e44848;
+}
+
+.main-text {
+  display: flex;
+  flex-direction: column;
+  padding: 2.4rem;
+  margin-bottom: 40px;
+  width: 60rem;
+  background-color: rgba(18, 17, 17, 0.5);
+  border-radius: 1.2rem;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px 10px rgba(11, 11, 11, 0.5) inset;
+  color: #fff;
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+.main-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1;
+  text-align: center;
+  color: inherit;
+}
+
+.span-camper {
+  color: #e44848;
+  font-weight: 900;
+}
+
+.home-text {
+  margin-top: 1rem;
+  text-align: center;
+}
+.home-submit {
+  font-weight: 700;
+  line-height: 22px;
+  text-decoration: none;
+  padding: 8px 20px;
+  font-size: 0.8rem;
+  color: white;
+  background-color: #e44848;
+  border-radius: 20px;
+  width: 140px;
+}
+.home-sub {
+  margin-top: 20px;
+  text-align: center;
+}
