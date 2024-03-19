@@ -8,18 +8,18 @@ const Type = () => {
     <div className="type-type">
       <p>Vehicle type</p>
       <Line />
-      <ul className="type-block">
+      <ul className="type-block" style={{ paddingLeft: 0 }}>
         <li className="catalog-type">
           <Arrow />
-          <p>AC</p>
+          <p className="type-name">Van</p>
         </li>
         <li className="catalog-type">
           <Arrow />
-          <p>AC</p>
+          <p className="type-name">Fully Integrated</p>
         </li>
         <li className="catalog-type">
           <Arrow />
-          <p>AC</p>
+          <p className="type-name">Alcove</p>
         </li>
       </ul>
     </div>
