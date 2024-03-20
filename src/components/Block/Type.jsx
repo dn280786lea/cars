@@ -1,6 +1,8 @@
 import React from 'react';
-import Arrow from '../../components/icons/Arrow';
+import VAN from '../../components/icons/VAN';
 import Line from '../../components/icons/Line';
+import Fully from '../../components/icons/Fully';
+import Alcove from '../../components/icons/Alcove';
 import './Type.css';
 
 const Type = () => {
@@ -12,15 +14,15 @@ const Type = () => {
       <Line />
       <ul className="type-block" style={{ paddingLeft: 0 }}>
         <li className="catalog-type">
-          <Arrow />
+          <VAN />
           <p className="type-name">Van</p>
         </li>
         <li className="catalog-type">
-          <Arrow />
+          <Fully />
           <p className="type-name">Fully Integrated</p>
         </li>
         <li className="catalog-type">
-          <Arrow />
+          <Alcove />
           <p className="type-name">Alcove</p>
         </li>
       </ul>

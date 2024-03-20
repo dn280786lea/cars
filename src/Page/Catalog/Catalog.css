@@ -17,5 +17,48 @@
 .location_input {
   border-radius: 10px;
   padding: 18px 218px 18px 18px;
+  width: 360px;
   background-color: #f7f7f7;
+}
+.catalog-content {
+  display: flex;
+  justify-content: space-between;
+  width: 80%; /* Ширина основного контейнера */
+}
+
+.left-content {
+  width: 60%; /* Ширина левой части */
+}
+
+.right-content {
+  width: 40%; /* Ширина правой части */
+}
+
+.location {
+  margin-bottom: 20px;
+}
+
+.block {
+  margin-bottom: 20px;
+}
+
+.type {
+  margin-bottom: 20px;
+}
+
+/* Медиа-запрос для адаптивного дизайна */
+@media (max-width: 768px) {
+  .catalog-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-content,
+  .right-content {
+    width: 100%;
+  }
+
+  .cards-name-info {
+    margin-top: 20px;
+  }
 }

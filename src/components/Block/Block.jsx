@@ -2,6 +2,9 @@ import React from 'react';
 import Arrow from '../../components/icons/Arrow';
 import Line from '../../components/icons/Line';
 import Bloom from '../../components/icons/Bloom';
+import Kitchen from '../../components/icons/Kitchen';
+import TV from '../../components/icons/TV';
+import Shower from '../../components/icons/Shower';
 
 import './Block.css';
 
@@ -23,15 +26,15 @@ const Block = () => {
           <p className="block-name">Automatic</p>
         </li>
         <li className="catalog-list">
-          <Arrow />
+          <Kitchen />
           <p className="block-name">Kitchen</p>
         </li>
         <li className="catalog-list">
-          <Arrow />
+          <TV />
           <p className="block-name">TV</p>
         </li>
         <li className="catalog-list">
-          <Arrow />
+          <Shower />
           <p className="block-name">Shower/WC</p>
         </li>
       </ul>
