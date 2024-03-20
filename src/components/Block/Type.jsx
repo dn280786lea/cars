@@ -6,7 +6,9 @@ import './Type.css';
 const Type = () => {
   return (
     <div className="type-type">
-      <p>Vehicle type</p>
+      <p className="type-type-name" style={{ marginTop: 0, marginBottom: 0 }}>
+        Vehicle type
+      </p>
       <Line />
       <ul className="type-block" style={{ paddingLeft: 0 }}>
         <li className="catalog-type">

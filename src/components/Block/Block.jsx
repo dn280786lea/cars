@@ -9,7 +9,9 @@ const Block = () => {
   return (
     <div className="filter">
       <h3>Filters</h3>
-      <p>Vehicle equipment</p>
+      <p className="filter-name" style={{ marginTop: 0, marginBottom: 0 }}>
+        Vehicle equipment
+      </p>
       <Line />
       <ul className="catalog-block" style={{ paddingLeft: 0 }}>
         <li className="catalog-list">
