@@ -2,6 +2,14 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './CardItems.css';
 import NeedHelpModal from '../Modal/Modal';
+import Kitchen from 'components/icons/Kitchen';
+import Adults from 'components/icons/Adults';
+import Arrow from 'components/icons/Arrow';
+import Petrol from 'components/icons/Petrol';
+import Beds from 'components/icons/Petrol';
+import Bloom from 'components/icons/Bloom';
+import Location from 'components/icons/Location';
+import Heart from 'components/icons/Heart';
 
 function CardItems() {
   const [cars, setCars] = useState([]);
@@ -34,50 +42,98 @@ function CardItems() {
   };
 
   return (
-    <div>
-      <div className="catalog-cars" id="catalog">
-        {cars.map((car, index) => (
-          <div key={car._id} className="advertisement">
-            <img className="car-photo" src={car.gallery[0]} alt={car.name} />
-            <div className="car-details">
-              <h3>{car.name}</h3>
-              <p>Price: ${car.price}</p>
-              <p>Rating: {car.rating}</p>
-              <p>Reviews: {countReviews(car.reviews)}</p>
-              <p>Location: {car.location}</p>
-              <p>Description: {car.description}</p>
-              <ul className="car-icons">
-                <li className="data-icons">
-                  {car.adults && <p>Adults: {car.adults}</p>}
-                </li>
-                <li className="data-icons">{car.transmission}</li>
-                <li className="data-icons">{car.engine}</li>
-                <li className="data-icons">Kitchen: {car.details.kitchen}</li>
-                <li className="data-icons">
-                  {car.details.beds && <p>Beds: {car.details.beds}</p>}
-                </li>
-                <li className="data-icons">Toilet: {car.details.toilet}</li>
-              </ul>
-              <button
-                className="cards-submit"
-                type="button"
-                onClick={() => setShownModal(true)}
-              >
-                Show more
-              </button>
+    <div className="catalog-cars" id="catalog">
+      <div className="wrapper">
+        {cars.map(car => (
+          <div className="catalog-cars" key={car._id}>
+            <div className="catalog-car">
+              <div className="image-container">
+                <img
+                  className="car-photo"
+                  src={car.gallery[0]}
+                  alt={car.name}
+                />
+              </div>
+              <div className="details-container">
+                <div className="title-container">
+                  <h2 className="title-cars">{car.name}</h2>
+                  <h2 className="title-price">Price: ${car.price}</h2>
+                  <span className="heart">
+                    <Heart />
+                  </span>
+                </div>
+                <div className="rating-wrapper">
+                  <div className="rating-container">
+                    <p>Rating: {car.rating}</p>
+                  </div>
+                  <p>Reviews: {countReviews(car.reviews)}</p>
+                </div>
+                <p>
+                  <Location /> {car.location}
+                </p>
+
+                <p className="description">Description: {car.description}</p>
+                <div className="detail-container">
+                  <div className="data-icons">
+                    <span className="icon-container">
+                      <Adults />
+                    </span>
+                    {car.adults && <>Adults: {car.adults}</>}
+                  </div>
+                  <div className="data-icons">
+                    <span className="icon-container">
+                      <Arrow />
+                    </span>
+                    {car.transmission}
+                  </div>
+                  <div className="data-icons">
+                    {' '}
+                    <span className="icon-container">
+                      <Petrol />
+                    </span>
+                    {car.engine}
+                  </div>
+                  <div className="data-icons">
+                    <span className="icon-container">
+                      <Kitchen />
+                    </span>
+                    Kitchen: {car.details.kitchen}
+                  </div>
+                  <div className="data-icons">
+                    <span className="icon-container">
+                      <Beds />
+                    </span>
+                    {car.details.beds && <>Beds: {car.details.beds}</>}
+                  </div>
+                  <li className="data-icons">
+                    <span className="icon-container">
+                      <Bloom />
+                    </span>{' '}
+                    AC
+                    {car.details.toilet}
+                  </li>
+                </div>
+                <button
+                  className="cards-submit"
+                  type="button"
+                  onClick={() => setShownModal(true)}
+                >
+                  Show more
+                </button>
+              </div>
             </div>
           </div>
         ))}
+        {displayedCars < totalCars && (
+          <button onClick={loadMore}>Load more</button>
+        )}
+        {shownModal && (
+          <NeedHelpModal
+            setShowModal={setShownModal}
+            onClose={() => setShownModal(false)}
+          />
+        )}
       </div>
-      {displayedCars < totalCars && (
-        <button onClick={loadMore}>Load more</button>
-      )}
-      {shownModal && (
-        <NeedHelpModal
-          setShowModal={setShownModal}
-          onClose={() => setShownModal(false)}
-        />
-      )}
     </div>
   );
 }

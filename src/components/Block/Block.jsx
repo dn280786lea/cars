@@ -18,23 +18,33 @@ const Block = () => {
       <Line />
       <ul className="catalog-block" style={{ paddingLeft: 0 }}>
         <li className="catalog-list">
-          <Bloom />
+          <span className="vehicle-icons">
+            <Bloom />
+          </span>
           <p className="block-name">AC</p>
         </li>
         <li className="catalog-list">
-          <Arrow />
+          <span className="vehicle-icons">
+            <Arrow />
+          </span>
           <p className="block-name">Automatic</p>
         </li>
         <li className="catalog-list">
-          <Kitchen />
+          <span className="vehicle-icons">
+            <Kitchen />
+          </span>
           <p className="block-name">Kitchen</p>
         </li>
         <li className="catalog-list">
-          <TV />
+          <span className="vehicle-icons">
+            <TV />
+          </span>
           <p className="block-name">TV</p>
         </li>
         <li className="catalog-list">
-          <Shower />
+          <span className="vehicle-icons">
+            <Shower />
+          </span>
           <p className="block-name">Shower/WC</p>
         </li>
       </ul>
