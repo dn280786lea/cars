@@ -50,12 +50,7 @@ const MainModal = () => {
               </div>
               <div className="image-wrapper">
                 {car.gallery.map((photo, index) => (
-                  <img
-                    key={index}
-                    className="car-photo"
-                    src={photo}
-                    alt={`Photo ${index + 1}`}
-                  />
+                  <img key={index} className="car-photo" src={photo} alt="" />
                 ))}
               </div>
               <p className="description-modal">
