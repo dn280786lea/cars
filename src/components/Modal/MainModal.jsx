@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import NeedHelpModal from '../Modal/Modal';
 import Location from 'components/icons/Location';
 import { getCarById } from '../../redux/operations';
 import {} from './MainModal.css';
@@ -56,7 +54,7 @@ const MainModal = () => {
                     key={index}
                     className="car-photo"
                     src={photo}
-                    alt={`${car.name} - Photo ${index + 1}`}
+                    alt={`Photo ${index + 1}`}
                   />
                 ))}
               </div>
