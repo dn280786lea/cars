@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import NeedHelpModal from '../Modal/Modal';
 import { getAllCars } from '../../redux/operations';
 import './Cards.css';
 import CardItems from '../CardList/CardItems';
 
 const Cards = () => {
-  const [shownModal, setShownModal] = useState(false);
-  const [setCars] = useState([]);
+  const [cars, setCars] = useState([]);
 
   useEffect(() => {
     const fetchCars = async () => {
@@ -30,12 +28,6 @@ const Cards = () => {
           </div>
         </div>
       </div>
-      {shownModal && (
-        <NeedHelpModal
-          setShowModal={setShownModal}
-          onClose={() => setShownModal(false)}
-        />
-      )}
     </div>
   );
 };

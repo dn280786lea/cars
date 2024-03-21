@@ -46,14 +46,18 @@ function CardItems() {
               <p>Reviews: {countReviews(car.reviews)}</p>
               <p>Location: {car.location}</p>
               <p>Description: {car.description}</p>
-              <div className="car-icons">
-                {car.adults && <p>Adults: {car.adults}</p>}
-                <p>Transmission: {car.transmission}</p>
-                <p>Engine: {car.engine}</p>
-                <p>Kitchen: {car.details.kitchen}</p>
-                {car.details.beds && <p>Beds: {car.details.beds}</p>}
-                <p>Toilet: {car.details.toilet}</p>
-              </div>
+              <ul className="car-icons">
+                <li className="data-icons">
+                  {car.adults && <p>Adults: {car.adults}</p>}
+                </li>
+                <li className="data-icons">{car.transmission}</li>
+                <li className="data-icons">{car.engine}</li>
+                <li className="data-icons">Kitchen: {car.details.kitchen}</li>
+                <li className="data-icons">
+                  {car.details.beds && <p>Beds: {car.details.beds}</p>}
+                </li>
+                <li className="data-icons">Toilet: {car.details.toilet}</li>
+              </ul>
               <button
                 className="cards-submit"
                 type="button"
@@ -69,12 +73,10 @@ function CardItems() {
         <button onClick={loadMore}>Load more</button>
       )}
       {shownModal && (
-        <div className="modal-container">
-          <NeedHelpModal
-            setShowModal={setShownModal}
-            onClose={() => setShownModal(false)}
-          />
-        </div>
+        <NeedHelpModal
+          setShowModal={setShownModal}
+          onClose={() => setShownModal(false)}
+        />
       )}
     </div>
   );

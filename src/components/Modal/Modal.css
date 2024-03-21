@@ -1,27 +1,24 @@
 .modal-overlay {
-  margin-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Затемнення */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .modal-help {
+  position: relative;
+  background: #fff;
   border-radius: 20px;
   padding: 40px;
   width: 982px;
   height: 720px;
-  background-color: #fff;
-  border: 2px solid black;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: 0px auto;
-  transform: translate(-50%, -50%);
-  border-radius: 14px;
-  padding: 1.4rem;
-  max-width: 54rem;
-  width: 95%;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  margin-top: 20px;
+  overflow-y: auto; /* Прокрутка, якщо контент перевищує розмір модального вікна */
 }
-
 .close-button {
   position: absolute;
   top: -12px;
