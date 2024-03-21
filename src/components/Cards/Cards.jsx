@@ -4,7 +4,7 @@ import './Cards.css';
 import CardItems from '../CardList/CardItems';
 
 const Cards = () => {
-  const [cars, setCars] = useState([]);
+  const [setCars] = useState([]);
 
   useEffect(() => {
     const fetchCars = async () => {
@@ -17,7 +17,7 @@ const Cards = () => {
     };
 
     fetchCars();
-  }, []);
+  }, [setCars]);
 
   return (
     <div className="Cards">
