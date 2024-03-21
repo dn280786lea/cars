@@ -15,6 +15,7 @@ function CardItems() {
   const [cars, setCars] = useState([]);
   const [displayedCars, setDisplayedCars] = useState(4);
   const [totalCars, setTotalCars] = useState(0);
+  const [selectedCar, setSelectedCar] = useState(null);
   const [shownModal, setShownModal] = useState(false);
 
   useEffect(() => {
@@ -27,6 +28,11 @@ function CardItems() {
 
   const loadMore = () => {
     setDisplayedCars(displayedCars + 4);
+  };
+
+  const handleShowModal = carId => {
+    setSelectedCar(carId);
+    setShownModal(true);
   };
 
   return (
@@ -104,7 +110,7 @@ function CardItems() {
                 <button
                   className="cards-submit"
                   type="button"
-                  onClick={() => setShownModal(true)}
+                  onClick={() => handleShowModal(car._id)}
                 >
                   Show more
                 </button>
@@ -119,6 +125,7 @@ function CardItems() {
         )}
         {shownModal && (
           <NeedHelpModal
+            carId={selectedCar}
             setShowModal={setShownModal}
             onClose={() => setShownModal(false)}
           />
