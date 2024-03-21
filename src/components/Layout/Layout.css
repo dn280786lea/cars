@@ -18,3 +18,29 @@ nav a {
 nav a.active {
   background-color: #555;
 }
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  animation-name: moveRight;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  fill: #e44848;
+  stroke: #e44848;
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(110px);
+  }
+}

@@ -11,7 +11,7 @@ import Location from 'components/icons/Location';
 import Heart from 'components/icons/Heart';
 import { getAllCars } from '../../redux/operations';
 
-function CardItems() {
+const CardItems = () => {
   const [cars, setCars] = useState([]);
   const [displayedCars, setDisplayedCars] = useState(4);
   const [totalCars, setTotalCars] = useState(0);
@@ -133,6 +133,6 @@ function CardItems() {
       </div>
     </div>
   );
-}
+};
 
 export default CardItems;

@@ -3,8 +3,9 @@
   font-size: 100px;
   line-height: 1;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 160px;
   color: #e44848;
+  padding-top: 60px;
 }
 
 .main-text {
@@ -53,4 +54,14 @@
 .home-sub {
   margin-top: 20px;
   text-align: center;
+}
+home {
+  position: relative;
+}
+
+.background-image {
+  background-image: url('../../components/img/cars.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
 }
