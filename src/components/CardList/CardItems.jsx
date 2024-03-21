@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import './CardItems.css';
 import NeedHelpModal from '../Modal/Modal';
 import Kitchen from 'components/icons/Kitchen';
@@ -10,6 +9,7 @@ import Beds from 'components/icons/Petrol';
 import Bloom from 'components/icons/Bloom';
 import Location from 'components/icons/Location';
 import Heart from 'components/icons/Heart';
+import { getAllCars } from '../../redux/operations';
 
 function CardItems() {
   const [cars, setCars] = useState([]);
@@ -18,19 +18,7 @@ function CardItems() {
   const [shownModal, setShownModal] = useState(false);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          'https://65f98457df1514524611d93d.mockapi.io/adverts/cars'
-        );
-        setTotalCars(response.data.length);
-        setCars(response.data.slice(0, displayedCars));
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
+    getAllCars(displayedCars, setTotalCars, setCars);
   }, [displayedCars]);
 
   const countReviews = reviews => {
@@ -125,7 +113,9 @@ function CardItems() {
           </div>
         ))}
         {displayedCars < totalCars && (
-          <button onClick={loadMore}>Load more</button>
+          <button className="loadmore" onClick={loadMore}>
+            Load more
+          </button>
         )}
         {shownModal && (
           <NeedHelpModal

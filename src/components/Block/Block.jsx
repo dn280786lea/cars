@@ -19,19 +19,19 @@ const Block = () => {
       <ul className="catalog-block" style={{ paddingLeft: 0 }}>
         <li className="catalog-list">
           <span className="vehicle-icons">
-            <Bloom />
+            <Bloom width={32} height={32} />
           </span>
           <p className="block-name">AC</p>
         </li>
         <li className="catalog-list">
           <span className="vehicle-icons">
-            <Arrow />
+            <Arrow width={32} height={32} />
           </span>
           <p className="block-name">Automatic</p>
         </li>
         <li className="catalog-list">
           <span className="vehicle-icons">
-            <Kitchen />
+            <Kitchen width={32} height={32} />
           </span>
           <p className="block-name">Kitchen</p>
         </li>

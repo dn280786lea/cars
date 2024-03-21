@@ -84,7 +84,8 @@
   mix-blend-mode: multiply;
 }
 
-.cards-submit {
+.cards-submit,
+.loadmore {
   font-weight: 700;
   line-height: 22px;
   text-decoration: none;

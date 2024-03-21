@@ -1,37 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import NeedHelpModal from '../Modal/Modal';
 import Location from 'components/icons/Location';
-import Heart from 'components/icons/Heart';
+import { getCarById } from '../../redux/operations';
 
 function CardItems() {
   const [cars, setCars] = useState([]);
-  const [displayedCars, setDisplayedCars] = useState(4);
-  const [totalCars, setTotalCars] = useState(0);
   const [shownModal, setShownModal] = useState(false);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          'https://65f98457df1514524611d93d.mockapi.io/adverts/cars'
-        );
-        setTotalCars(response.data.length);
-        setCars(response.data.slice(0, displayedCars));
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
-  }, [displayedCars]);
+    // Передайте id, якщо він вам потрібний у `useEffect`
+    const id = 'your_car_id';
+    getCarById(id);
+  }, []); // Змінна id не потрібна у залежності useEffect
 
   const countReviews = reviews => {
     return reviews.length;
-  };
-
-  const loadMore = () => {
-    setDisplayedCars(displayedCars + 4);
   };
 
   return (
@@ -51,14 +34,12 @@ function CardItems() {
                 <div className="title-container">
                   <h2 className="title-cars">{car.name}</h2>
                   <h2 className="title-price">Price: ${car.price}</h2>
-                  <span className="heart">
-                    <Heart />
-                  </span>
                 </div>
                 <div className="rating-wrapper">
                   <div className="rating-container">
                     <p>Rating: {car.rating}</p>
                   </div>
+                  {/* Передайте відгуки у countReviews */}
                   <p>Reviews: {countReviews(car.reviews)}</p>
                 </div>
                 <p>
@@ -76,9 +57,6 @@ function CardItems() {
             </div>
           </div>
         ))}
-        {displayedCars < totalCars && (
-          <button onClick={loadMore}>Load more</button>
-        )}
         {shownModal && (
           <NeedHelpModal
             setShowModal={setShownModal}
