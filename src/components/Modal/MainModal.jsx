@@ -3,51 +3,42 @@ import { useParams } from 'react-router-dom';
 import NeedHelpModal from '../Modal/Modal';
 import Location from 'components/icons/Location';
 import { getCarById } from '../../redux/operations';
+import {} from './MainModal.css';
 
-const CardItems = () => {
-  const { id } = useParams();
-  const [cars, setCars] = useState(null);
+const MainModal = () => {
+  const [car, setCar] = useState(null);
 
   useEffect(() => {
-    const fetchCars = async () => {
+    const fetchCar = async () => {
       try {
-        const carsData = await getCarById(id);
-        setCars(carsData);
+        const carData = await getCarById('1');
+        setCar(carData);
       } catch (error) {
-        console.error(error.message);
+        console.error('Error fetching car information:', error);
+        setCar(null);
       }
     };
+    fetchCar();
+  }, []);
 
-    fetchCars();
-  }, [id]);
-
-  if (!cars) {
-    return <div>Loading cars...</div>;
+  if (!car) {
+    return <div>Loading car...</div>;
   }
+
   const countReviews = reviews => {
     return reviews.length;
   };
 
   return (
-    <div className="catalog-cars" id="catalog">
-      <div className="wrapper">
-        {cars.map(car => (
-          <div className="catalog-cars" key={car._id}>
-            <div className="catalog-car">
-              <div className="image-container">
-                <img
-                  className="car-photo"
-                  src={car.gallery[0]}
-                  alt={car.name}
-                />
-              </div>
-              <div className="details-container">
-                <div className="title-container">
-                  <h2 className="title-cars">{car.name}</h2>
-                  <h2 className="title-price">Price: ${car.price}</h2>
-                </div>
-                <div className="rating-wrapper">
-                  <div className="rating-container">
+    <div className="detail-cars" id="catalog">
+      <div className="wrapper-modal">
+        <div className="modal-cars-modal" key={car._id}>
+          <div className="modal-car">
+            <div className="details-container">
+              <div className="title-container">
+                <h2 className="title-cars">{car.name}</h2>
+                <div className="rating-modal-wrapper">
+                  <div className="rating-modal-container">
                     <p>Rating: {car.rating}</p>
                   </div>
                   <p>Reviews: {countReviews(car.reviews)}</p>
@@ -55,14 +46,25 @@ const CardItems = () => {
                 <p>
                   <Location /> {car.location}
                 </p>
-                <p className="description">Description: {car.description}</p>
+                <h2 className="title-price">Price: ${car.price}</h2>
               </div>
+              <div className="image-wrapper">
+                {car.gallery.map((photo, index) => (
+                  <img
+                    key={index}
+                    className="car-photo"
+                    src={photo}
+                    alt={`${car.name} - Photo ${index + 1}`}
+                  />
+                ))}
+              </div>
+              <p className="description">Description: {car.description}</p>
             </div>
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );
 };
 
-export default CardItems;
+export default MainModal;
