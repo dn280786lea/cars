@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import Modal from '../Modal/Modal';
-const Modal = () => {
+import NeedHelpModal from '../Modal/Modal';
+
+const ModalWrapper = () => {
   const [shownModal, setShownModal] = useState(false);
   return (
     <>
@@ -17,3 +18,5 @@ const Modal = () => {
     </>
   );
 };
+
+export default ModalWrapper;
