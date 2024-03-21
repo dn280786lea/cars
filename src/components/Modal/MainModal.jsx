@@ -1,18 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import NeedHelpModal from '../Modal/Modal';
 import Location from 'components/icons/Location';
 import { getCarById } from '../../redux/operations';
 
-function CardItems() {
-  const [cars, setCars] = useState([]);
-  const [shownModal, setShownModal] = useState(false);
+const CardItems = () => {
+  const { id } = useParams();
+  const [cars, setCars] = useState(null);
 
   useEffect(() => {
-    // Передайте id, якщо він вам потрібний у `useEffect`
-    const id = 'your_car_id';
-    getCarById(id);
-  }, []); // Змінна id не потрібна у залежності useEffect
+    const fetchCars = async () => {
+      try {
+        const carsData = await getCarById(id);
+        setCars(carsData);
+      } catch (error) {
+        console.error(error.message);
+      }
+    };
 
+    fetchCars();
+  }, [id]);
+
+  if (!cars) {
+    return <div>Loading cars...</div>;
+  }
   const countReviews = reviews => {
     return reviews.length;
   };
@@ -46,26 +57,13 @@ function CardItems() {
                   <Location /> {car.location}
                 </p>
                 <p className="description">Description: {car.description}</p>
-                <button
-                  className="cards-submit"
-                  type="button"
-                  onClick={() => setShownModal(true)}
-                >
-                  Show more
-                </button>
               </div>
             </div>
           </div>
         ))}
-        {shownModal && (
-          <NeedHelpModal
-            setShowModal={setShownModal}
-            onClose={() => setShownModal(false)}
-          />
-        )}
       </div>
     </div>
   );
-}
+};
 
 export default CardItems;
