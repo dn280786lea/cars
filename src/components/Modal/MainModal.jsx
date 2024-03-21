@@ -50,7 +50,6 @@ const CardItems = () => {
                   <div className="rating-container">
                     <p>Rating: {car.rating}</p>
                   </div>
-                  {/* Передайте відгуки у countReviews */}
                   <p>Reviews: {countReviews(car.reviews)}</p>
                 </div>
                 <p>
