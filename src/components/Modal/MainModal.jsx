@@ -11,7 +11,7 @@ const MainModal = () => {
   useEffect(() => {
     const fetchCar = async () => {
       try {
-        const carData = await getCarById('1');
+        const carData = await getCarById('4');
         setCar(carData);
       } catch (error) {
         console.error('Error fetching car information:', error);
@@ -36,17 +36,19 @@ const MainModal = () => {
           <div className="modal-car">
             <div className="details-container">
               <div className="title-container">
-                <h2 className="title-cars">{car.name}</h2>
-                <div className="rating-modal-wrapper">
-                  <div className="rating-modal-container">
-                    <p>Rating: {car.rating}</p>
+                <div className="car-modal-detal">
+                  <h2 className="title-cars">{car.name}</h2>
+                  <div className="rating-modal-wrapper">
+                    <div className="rating-modal-container">
+                      <p>Rating: {car.rating}</p>
+                    </div>
+                    <p>Reviews: {countReviews(car.reviews)}</p>
                   </div>
-                  <p>Reviews: {countReviews(car.reviews)}</p>
+                  <p className="local-modal">
+                    <Location /> {car.location}
+                  </p>
+                  <h2 className="title-price-modal">Price: ${car.price}</h2>
                 </div>
-                <p>
-                  <Location /> {car.location}
-                </p>
-                <h2 className="title-price">Price: ${car.price}</h2>
               </div>
               <div className="image-wrapper">
                 {car.gallery.map((photo, index) => (
@@ -58,7 +60,9 @@ const MainModal = () => {
                   />
                 ))}
               </div>
-              <p className="description">Description: {car.description}</p>
+              <p className="description-modal">
+                Description: {car.description}
+              </p>
             </div>
           </div>
         </div>
