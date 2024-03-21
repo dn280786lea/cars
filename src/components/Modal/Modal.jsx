@@ -1,6 +1,7 @@
 import './Modal.css';
 import React, { useEffect } from 'react';
 import Close from '../icons/Close.jsx';
+import MainModal from './MainModal';
 
 const NeedHelpModal = ({ setShowModal, onClose }) => {
   useEffect(() => {
@@ -34,10 +35,7 @@ const NeedHelpModal = ({ setShowModal, onClose }) => {
             {' '}
             <Close />
           </button>
-          <h2 className="form-title-lh">Need Help</h2>
-          <button type="submit" className="btn-send-lg">
-            Send
-          </button>
+          <MainModal />
         </form>
       </div>
     </div>
