@@ -7,6 +7,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   width: 360px;
+  margin-top: 20px;
 }
 
 .catalog-list {

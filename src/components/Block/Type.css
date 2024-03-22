@@ -14,6 +14,7 @@
   height: 95px;
   cursor: pointer;
   text-align: center;
+  margin-top: 20px;
 }
 
 .catalog-type:hover {

@@ -1,11 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Block from '../../components/Block/Block';
 import Type from '../../components/Block/Type';
 import Cards from '../../components/Cards/Cards';
+import { fetchLocations } from '../../redux/operations';
 import './Catalog.css';
+import Location from '../../components/icons/Location';
 
 const Catalog = () => {
   const [text, setText] = useState('');
+  const [locations, setLocations] = useState([]);
+
+  useEffect(() => {
+    const fetchLocationsData = async () => {
+      try {
+        const uniqueLocations = await fetchLocations();
+        setLocations(uniqueLocations);
+      } catch (error) {
+        console.error('Error fetching locations:', error);
+      }
+    };
+
+    fetchLocationsData();
+  }, []);
 
   const handleChange = event => {
     setText(event.target.value);
@@ -18,14 +34,22 @@ const Catalog = () => {
           <div className="location">
             <form action="">
               <h3>Location</h3>
-              <input
+              <select
                 className="location_input"
-                type="text"
-                name="text"
                 value={text}
                 onChange={handleChange}
-                placeholder="Enter location"
-              />
+              >
+                <option value="">Select location</option>
+
+                {locations.map((location, index) => (
+                  <option key={index} value={location}>
+                    <p className="local-modal">
+                      <Location />
+                      {location}
+                    </p>
+                  </option>
+                ))}
+              </select>
             </form>
           </div>
           <div className="block">
@@ -34,7 +58,11 @@ const Catalog = () => {
           <div className="type">
             <Type />
           </div>
-          <button className="catalog-submit" type="submit">
+          <button
+            className="catalog-submit"
+            type="submit"
+            /*  onSubmit={handleSubmit} */
+          >
             Search
           </button>
         </div>

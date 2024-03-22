@@ -23,3 +23,19 @@ export const getCarById = async id => {
     return null;
   }
 };
+
+export const fetchLocations = async () => {
+  try {
+    const response = await axios.get(
+      'https://65f98457df1514524611d93d.mockapi.io/adverts/cars'
+    );
+    const carsData = response.data;
+    const uniqueLocations = Array.from(
+      new Set(carsData.map(car => car.location))
+    );
+    return uniqueLocations;
+  } catch (error) {
+    console.error('Error fetching locations:', error);
+    throw error;
+  }
+};

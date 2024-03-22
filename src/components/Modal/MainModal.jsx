@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Location from 'components/icons/Location';
 import { getCarById } from '../../redux/operations';
 import {} from './MainModal.css';
+import Rating from '@mui/material/Rating';
+import Review from '../Review/Review';
+import Features from '../Features/Features';
 
 const MainModal = () => {
   const [car, setCar] = useState(null);
@@ -36,26 +39,48 @@ const MainModal = () => {
               <div className="title-container">
                 <div className="car-modal-detal">
                   <h2 className="title-cars">{car.name}</h2>
-                  <div className="rating-modal-wrapper">
-                    <div className="rating-modal-container">
-                      <p>Rating: {car.rating}</p>
+                  <div className="car-datail-review">
+                    <div className="rating-modal-wrapper">
+                      <div className="rating-modal-container">
+                        <Rating
+                          name="half-rating-read"
+                          value={car.rating.toFixed(1)}
+                          precision={0.1}
+                          readOnly
+                          max={1}
+                          className="rating-modal"
+                        />
+                        <p className="car_rating">{car.rating}</p>
+                      </div>
+                      <p className="car-reviews">
+                        (Reviews: {countReviews(car.reviews)})
+                      </p>
                     </div>
-                    <p>Reviews: {countReviews(car.reviews)}</p>
+                    <p className="local-modal">
+                      <Location /> {car.location}
+                    </p>
                   </div>
-                  <p className="local-modal">
-                    <Location /> {car.location}
-                  </p>
                   <h2 className="title-price-modal">Price: ${car.price}</h2>
                 </div>
               </div>
               <div className="image-wrapper">
                 {car.gallery.map((photo, index) => (
-                  <img key={index} className="car-photo" src={photo} alt="" />
+                  <img
+                    key={index}
+                    className="car-photo-modal"
+                    src={photo}
+                    alt=""
+                  />
                 ))}
               </div>
               <p className="description-modal">
                 Description: {car.description}
               </p>
+              <div>
+                <Features />
+              </div>
+
+              {/*     <Review /> */}
             </div>
           </div>
         </div>

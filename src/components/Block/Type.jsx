@@ -22,7 +22,7 @@ const Type = () => {
           <p className="type-name">Fully Integrated</p>
         </li>
         <li className="catalog-type">
-          <Alcove />
+          <Alcove width={40} height={29} />
           <p className="type-name">Alcove</p>
         </li>
       </ul>

@@ -1,5 +1,6 @@
 .catalog {
-  margin: 0 20px;
+  width: 1440px;
+  margin: 0 auto;
 }
 .catalog-submit {
   font-weight: 700;
@@ -19,19 +20,17 @@
   padding: 18px 218px 18px 18px;
   width: 360px;
   background-color: #f7f7f7;
+  font-weight: 400;
+  font-size: 18px;
 }
 .catalog-content {
   display: flex;
-  justify-content: space-between;
-  width: 80%; /* Ширина основного контейнера */
+  width: 100%;
+  max-width: 1440px;
+  margin: 0px auto;
 }
-
 .left-content {
-  width: 60%; /* Ширина левой части */
-}
-
-.right-content {
-  width: 40%; /* Ширина правой части */
+  margin-right: 200px;
 }
 
 .location {
@@ -46,7 +45,6 @@
   margin-bottom: 20px;
 }
 
-/* Медиа-запрос для адаптивного дизайна */
 @media (max-width: 768px) {
   .catalog-content {
     flex-direction: column;

@@ -8,7 +8,7 @@ const Line = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path d="M0 1H360" stroke="#101828" stroke-opacity="0.1" />
+    <path d="M0 1H360" stroke="#101828" strokeOpacity="0.1" />
   </svg>
 );
 

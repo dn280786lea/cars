@@ -1,9 +1,39 @@
 .image-wrapper {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   width: 100%;
+  gap: 20px;
+  border-radius: 10px;
+  height: 310px;
+  align-items: center;
 }
 .car-modal-detal {
   display: flex;
   flex-direction: column;
+}
+.rating-modal-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.car-photo-modal {
+  width: 290px;
+  height: 310px;
+}
+.rating-modal-container {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  text-decoration-line: underline;
+}
+.car-reviews {
+  text-decoration-line: underline;
+}
+
+.car-datail-review {
+  display: flex;
+}
+
+.local-modal {
+  margin-left: 20px;
 }

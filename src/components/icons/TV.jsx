@@ -25,16 +25,16 @@ const TV = () => (
     <path
       d="M16 8.5L22 2.5"
       stroke="#101828"
-      stroke-width="1.8"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M16 8.5L10 2.5"
       stroke="#101828"
-      stroke-width="1.8"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );

@@ -10,6 +10,7 @@ import Bloom from 'components/icons/Bloom';
 import Location from 'components/icons/Location';
 import Heart from 'components/icons/Heart';
 import { getAllCars } from '../../redux/operations';
+import Rating from '@mui/material/Rating';
 
 const CardItems = () => {
   const [cars, setCars] = useState([]);
@@ -58,12 +59,20 @@ const CardItems = () => {
                 </div>
                 <div className="rating-wrapper">
                   <div className="rating-container">
+                    <Rating
+                      name="half-rating-read"
+                      value={car.rating.toFixed(1)}
+                      precision={0.1}
+                      readOnly
+                      max={1}
+                      className="rating"
+                    />
                     <p>Rating: {car.rating}</p>
                   </div>
                   <p>Reviews: {countReviews(car.reviews)}</p>
                 </div>
                 <p>
-                  <Location /> {car.location}
+                  <Location style="marginTop: 0" /> {car.location}
                 </p>
 
                 <p className="description">Description: {car.description}</p>
