@@ -122,6 +122,6 @@
 }
 .catalog-cars {
   display: block;
-  align-items: flex-end;
+  align-items: end;
   margin-right: auto;
 }

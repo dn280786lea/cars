@@ -3,7 +3,7 @@ import Location from 'components/icons/Location';
 import { getCarById } from '../../redux/operations';
 import {} from './MainModal.css';
 import Rating from '@mui/material/Rating';
-import Review from '../Review/Review';
+/* import Review from '../Review/Review'; */
 import Features from '../Features/Features';
 
 const MainModal = () => {

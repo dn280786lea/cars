@@ -71,10 +71,9 @@ const CardItems = () => {
                   </div>
                   <p>Reviews: {countReviews(car.reviews)}</p>
                 </div>
-                <p>
-                  <Location style="marginTop: 0" /> {car.location}
+                <p style={{ marginTop: 0 }}>
+                  <Location /> {car.location}
                 </p>
-
                 <p className="description">Description: {car.description}</p>
                 <div className="detail-container">
                   <div className="data-icons">
