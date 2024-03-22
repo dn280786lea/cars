@@ -1,6 +1,5 @@
 .catalog-car {
   display: flex;
-  justify-content: end;
   flex-direction: row;
   gap: 24px;
   border-radius: 20px;
