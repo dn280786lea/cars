@@ -3,11 +3,11 @@ import Location from 'components/icons/Location';
 import { getCarById } from '../../redux/operations';
 import {} from './MainModal.css';
 import Rating from '@mui/material/Rating';
-/* import Review from '../Review/Review'; */
-import Features from '../Features/Features';
+import Tabs from '../Tab/Tab';
 
 const MainModal = () => {
   const [car, setCar] = useState(null);
+  const [activeTab, setActiveTab] = useState('features');
 
   useEffect(() => {
     const fetchCar = async () => {
@@ -76,11 +76,10 @@ const MainModal = () => {
               <p className="description-modal">
                 Description: {car.description}
               </p>
-              <div>
-                <Features />
-              </div>
 
-              {/*     <Review /> */}
+              <div>
+                <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
+              </div>
             </div>
           </div>
         </div>

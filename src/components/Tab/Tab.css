@@ -1,0 +1,20 @@
+.tab-list {
+  display: flex;
+  gap: 20px;
+}
+
+.active {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  text-decoration-line: underline;
+  background-color: none;
+}
+
+.inactive {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  text-decoration: transparent;
+  background-color: transparent;
+}

@@ -11,6 +11,8 @@ import Location from 'components/icons/Location';
 import Heart from 'components/icons/Heart';
 import { getAllCars } from '../../redux/operations';
 import Rating from '@mui/material/Rating';
+import Cards from 'components/Cards/Cards';
+import { Loader } from '../Loader/Loader';
 
 const CardItems = () => {
   const [cars, setCars] = useState([]);
@@ -30,6 +32,13 @@ const CardItems = () => {
   const loadMore = () => {
     setDisplayedCars(displayedCars + 4);
   };
+  if (!Cards) {
+    return (
+      <div>
+        <Loader />
+      </div>
+    );
+  }
 
   const handleShowModal = carId => {
     setSelectedCar(carId);
