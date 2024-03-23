@@ -1,105 +1,79 @@
-# React homework template
+## App for a car Rent camper
 
-This project was created with
-[Create React App](https://github.com/facebook/create-react-app). To get
-acquainted and configure additional features
-[refer to documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Description.
 
-## Creating a repository by template
+The application consists of 3 pages:
 
-Use this GoIT repository as a template for creating a repository
-of your project. To use it just tap the `«Use this template»` button and choose
-`«Create a new repository»` option, as you can see on the image below.
+- home page with a general description of the services provided by the company.
+- a page containing a catalogue of cars
+- a page with ads that have been added to the user's favourites.
 
-![Creating repo from a template step 1](./assets/template-step-1.png)
+All pages have a header with a page menu, a viewing area for the main
+information, and a footer with the contact details of the app owner.
 
-The page for creating a new repository will open on the next step. Fill out
-the Name field and make sure the repository is public, then click
-`«Create repository from template»` button.
+## Home page.
 
-![Creating repo from a template step 2](./assets/template-step-2.png)
+1. It has a hero section with a general description of the service and a link to
+   the catalogue page car catalogue page.
+2. If necessary, sections with information about the company, detailed
+   description of services and car rental conditions.
 
-You now have a personal project repository, having a repository-template file 
-and folder structure. After that, you can work with it as you would with any 
-other private repository: clone it on your computer, write code, commit, and 
-send it to GitHub.
+## Car catalogue page
 
-## Preparing for coding
+### Section with car cards
 
-1. Make sure you have an LTS version of Node.js installed on your computer.
-   [Download and install](https://nodejs.org/en/) if needed.
-2. Install the project's base dependencies with the `npm install` command.
-3. Start development mode by running the `npm start` command.
-4. Go to [http://localhost:3000](http://localhost:3000) in your browser. This
-   page will automatically reload after saving changes to the project files.
+1. When you open the page, the first 4 car rental ads from the database are
+   rendered.
+2. Each next 4 ads from the database can be loaded on the page by clicking on
+   the `Load more` button. It is located under the ads.
+3. When all the ads from the database are loaded, the `Load more` button
+   disappears.
+4. When you click on the heart button on the ad card, it is added to the list of
+   favourites to the list of favourites, and the colour of the button changes to
+   blue.
+5. When the page refreshes, the end result of the user's actions is recorded
+   (favourites cars remain in the list of favourites). Implemented using local
+   storage.
+6. If you click on the "heart" button again, the advert is removed from the the
+   list of favourites, and the colour of the button changes to its original
+   state.
+7. Clicking on the Learn more button opens a modal window with detailed
+   information about the car and its rental conditions.
 
-## Deploy
+### Modal window with detailed information about the car
 
-The production version of the project will automatically be linted, built, and
-deployed to GitHub Pages, in the `gh-pages` branch, every time the `main` branch
-is updated. For example, after a direct push or an accepted pull request. To do
-this, you need to edit the `homepage` field in the `package.json` file,
-replacing `your_username` and `your_repo_name` with your own, and submit the
-changes to GitHub.
+1. The modal window is closed by clicking on the button in the form of a
+   "cross", by clicking on the `backdrop` button or by pressing the `Esc` key.
 
-```json
-"homepage": "https://your_username.github.io/your_repo_name/"
-```
+## Page of selected cars
 
-Next, you need to go to the settings of the GitHub repository (`Settings` >
-`Pages`) and set the distribution of the production version of files from the
-`/root` folder of the `gh-pages` branch, if this was not done automatically.
+1. Renders the cars that have been added to the list of favourites.
+2. If there are no selected cars, a blank page is displayed with a blank page
+   with an offer to visit the car catalogue and a link to the catalogue.
 
-![GitHub Pages settings](./assets/repo-settings.png)
+## Test task
 
-### Deployment status
+## Description.
 
-The deployment status of the latest commit is displayed with an icon next to its
-ID.
+Create an application for a company that provides car rental services in
+Ukraine. for rent in Ukraine. The application consists of 3 pages:
 
-- **Yellow color** - the project is being built and deployed.
-- **Green color** - deployment completed successfully.
-- **Red color** - an error occurred during linting, build or deployment.
+- home page with a general description of the services provided by the company.
+  Styling and design is at your discretion.
+- a page containing a catalogue
+- a page with ads that have been added to the user's favourites The external The
+  appearance of the application should consist of a sidebar and a viewing area.
 
-More detailed information about the status can be viewed by clicking on the
-icon, and in the drop-down window, follow the link `Details`.
+Create a routing using React Router. The application should have the following
+routes:
 
-![Deployment status](./assets/deploy-status.png)
+- `"/"` - the home page with a general description of the services provided by
+  the company
+- `"/catalogue"` - a page containing a catalogue of cars of different
+  configurations
+- `"/favourites"` - a page with ads that have been added by the user to
+  favourites
 
-### Live page
+Advert
 
-After some time, usually a couple of minutes, the live page can be viewed at the
-address specified in the edited `homepage` property. For example, here is a link
-to a live version for this repository
-[https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
-
-If a blank page opens, make sure there are no errors in the `Console` tab
-related to incorrect paths to the CSS and JS files of the project (**404**). You
-most likely have the wrong value for the `homepage` property in the
-`package.json` file.
-
-### Routing
-
-If your application uses the `react-router-dom` library for routing, you must
-additionally configure the `<BrowserRouter>` component by passing the exact name
-of your repository in the `basename` prop. Slashes at the beginning and end of
-the line are required.
-
-```jsx
-<BrowserRouter basename="/your_repo_name/">
-  <App />
-</BrowserRouter>
-```
-
-## How it works
-
-![How it works](./assets/how-it-works.png)
-
-1. After each push to the `main` branch of the GitHub repository, a special
-   script (GitHub Action) is launched from the `.github/workflows/deploy.yml`
-   file.
-2. All repository files are copied to the server, where the project is
-   initialized and linted and built before deployment.
-3. If all steps are successful, the built production version of the project
-   files is sent to the `gh-pages` branch. Otherwise, the script execution log
-   will indicate what the problem is.
+1. Create an `advert` in **Mockapi**

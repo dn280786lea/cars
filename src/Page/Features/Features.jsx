@@ -39,7 +39,11 @@ const Features = () => {
     <div className="features-detail-cars" id="catalog">
       <div className="data-features">
         <Line />
-        <div className="modal-cars-modal" key={car._id}>
+        <div
+          className="modal-cars-modal"
+          key={car._id}
+          style={{ marginLeft: '0px', width: '40000px' }}
+        >
           <ul className="detail-container">
             <li className="data-icons">
               <span className="icon-container">

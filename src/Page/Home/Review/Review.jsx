@@ -27,13 +27,46 @@ const MainModal = () => {
   if (!car) {
     return <div>Loading car...</div>;
   }
+  const handleSubmit = async evt => {
+    evt.preventDefault();
+
+    if (email.trim() === '' || text.trim() === '') {
+      toast(t('sidebar.helpModal.toast.error'), TOASTER_CONFIG);
+      return;
+    }
+
+    if (text.trim().length < 5) {
+      toast(t('sidebar.helpModal.toast.long'), TOASTER_CONFIG);
+      return;
+    }
+
+    try {
+      dispatch(support({ email, text }));
+      toast(t('sidebar.helpModal.toast.success'), TOASTER_CONFIG);
+      showModal(false);
+    } catch (error) {
+      toast('Failed to send email', TOASTER_CONFIG);
+    }
+  };
+
+  const handleEmailChange = evt => {
+    setEmail(evt.target.value);
+  };
+
+  const handleTextChange = evt => {
+    setText(evt.target.value);
+  };
 
   return (
     <div className="features-detail-cars" id="catalog">
       <h2>Features</h2>
       <div className="data-features">
         <Line />
-        <div className="modal-cars-modal" key={car._id}>
+        <div
+          className="modal-cars-modal"
+          key={car._id}
+          style={{ marginLeft: '0px', width: '40000px' }}
+        >
           <ul className="detail-container">
             <li className="data-icons">
               <span className="icon-container">

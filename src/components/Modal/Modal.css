@@ -14,7 +14,7 @@
   position: relative;
   background: #fff;
   border-radius: 20px;
-  padding: 40px;
+  padding: 15px 30px 15px 30px;
   width: 982px;
   height: 720px;
   overflow-y: auto; /* Прокрутка, якщо контент перевищує розмір модального вікна */
