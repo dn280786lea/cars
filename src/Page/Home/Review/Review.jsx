@@ -1,31 +1,75 @@
 import React, { useEffect, useState } from 'react';
-import { getCarById } from '../../redux/operations';
 import Kitchen from 'components/icons/Kitchen';
 import Adults from 'components/icons/Adults';
 import Arrow from 'components/icons/Arrow';
 import Petrol from 'components/icons/Petrol';
-import Beds from 'components/icons/Petrol';
+import Beds from 'components/icons/Beds';
 import Bloom from 'components/icons/Bloom';
 import Line from 'components/icons/Line';
+import toast from 'react-hot-toast';
+import Loader from 'components/Loader/Loader';
 
-const MainModal = () => {
+const Review = ({ closeModal }) => {
   const [car, setCar] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    bookingDate: '',
+    comment: '',
+  });
 
-  useEffect(() => {
+  const handleChange = evt => {
+    const { name, value } = evt.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+  const handleDateChange = date => {
+    const selectedDate = date.toISOString().split('T')[0];
+    const today = new Date().toISOString().split('T')[0];
+
+    if (selectedDate < today) {
+      toast.error('Please select a date from today onwards!');
+      return;
+    }
+
+    setFormData(prevState => ({
+      ...prevState,
+      bookingDate: selectedDate,
+    }));
+  };
+
+  const handleSubmit = event => {
+    event.preventDefault();
+
+    toast.success('Your message was sent successfully ✅');
+
+    closeModal();
+  };
+
+  /*  useEffect(() => {
     const fetchCar = async () => {
       try {
         const carData = await getCarById('4');
         setCar(carData);
+        setLoading(false);
       } catch (error) {
-        console.error('Error fetching car information:', error);
+        console.error(error);
         setCar(null);
+        setLoading(false);
       }
     };
     fetchCar();
   }, []);
-
-  if (!car) {
-    return <div>Loading car...</div>;
+ */
+  if (loading) {
+    return (
+      <div>
+        <Loader />.
+      </div>
+    );
   }
 
   return (
@@ -98,22 +142,59 @@ const MainModal = () => {
             </li>
           </ul>
         </div>
-        <form action="form" className="form-container">
+        <form onSubmit={handleSubmit} className="form-container">
           <h2>Book your campervan now</h2>
           <p>Stay connected! We are always ready to help you.</p>
           <div className="form-row">
-            <input type="text" name="text" placeholder="Name" />
+            <label htmlFor="name" />
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              autoFocus
+            />
           </div>
           <div className="form-row">
-            <input type="email" name="email" placeholder="Email" />
+            <label htmlFor="email" />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
           </div>
           <div className="form-row">
-            <input type="date" name="date" placeholder="Booking date" />
+            <label htmlFor="bookingDate" />
+            <input
+              type="date"
+              name="bookingDate"
+              placeholder="Booking date"
+              value={formData.bookingDate}
+              onChange={handleDateChange}
+              required
+            />
           </div>
           <div className="form-row">
-            <textarea type="text" name="comment" placeholder="Comment" />
+            <textarea
+              type="text"
+              name="comment"
+              placeholder="Comment"
+              value={formData.comment}
+              onChange={handleChange}
+            />
           </div>
-          <button className="features-submit" type="submit">
+          <button
+            className="features-submit"
+            type="submit"
+            disabled={
+              !formData.name || !formData.email || !formData.bookingDate
+            }
+          >
             Send
           </button>
         </form>
@@ -122,4 +203,4 @@ const MainModal = () => {
   );
 };
 
-export default MainModal;
+export default Review;
