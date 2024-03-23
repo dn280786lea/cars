@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/418.0c1f30dc.chunk.css","mappings":"AAAA,UAKE,aAAc,CAHd,cAAe,CADf,eAAgB,CAEhB,aAAc,CAGd,gBAAiB,CAFjB,iBAGF","sources":["Page/Favorite/Favorit.css"],"sourcesContent":[".favorite {\n  font-weight: 900;\n  font-size: 40px;\n  line-height: 1;\n  text-align: center;\n  color: #101828;\n  padding-top: 30px;\n}\n"],"names":[],"sourceRoot":""}
