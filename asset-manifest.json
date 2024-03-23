@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/cars/static/css/main.6cc20729.css",
-    "main.js": "/cars/static/js/main.8717fa75.js",
+    "main.js": "/cars/static/js/main.488b01f4.js",
     "static/css/602.6686902f.chunk.css": "/cars/static/css/602.6686902f.chunk.css",
     "static/js/602.9eeb1ecc.chunk.js": "/cars/static/js/602.9eeb1ecc.chunk.js",
-    "static/css/68.91cf82e0.chunk.css": "/cars/static/css/68.91cf82e0.chunk.css",
-    "static/js/68.f089f03b.chunk.js": "/cars/static/js/68.f089f03b.chunk.js",
+    "static/css/353.36c982a9.chunk.css": "/cars/static/css/353.36c982a9.chunk.css",
+    "static/js/353.cd62cb51.chunk.js": "/cars/static/js/353.cd62cb51.chunk.js",
     "static/js/310.40408377.chunk.js": "/cars/static/js/310.40408377.chunk.js",
     "static/js/214.183484e0.chunk.js": "/cars/static/js/214.183484e0.chunk.js",
     "static/media/house-car.png": "/cars/static/media/house-car.2d20a740b6fab27d0f93.png",
     "index.html": "/cars/index.html",
     "main.6cc20729.css.map": "/cars/static/css/main.6cc20729.css.map",
-    "main.8717fa75.js.map": "/cars/static/js/main.8717fa75.js.map",
+    "main.488b01f4.js.map": "/cars/static/js/main.488b01f4.js.map",
     "602.6686902f.chunk.css.map": "/cars/static/css/602.6686902f.chunk.css.map",
     "602.9eeb1ecc.chunk.js.map": "/cars/static/js/602.9eeb1ecc.chunk.js.map",
-    "68.91cf82e0.chunk.css.map": "/cars/static/css/68.91cf82e0.chunk.css.map",
-    "68.f089f03b.chunk.js.map": "/cars/static/js/68.f089f03b.chunk.js.map",
+    "353.36c982a9.chunk.css.map": "/cars/static/css/353.36c982a9.chunk.css.map",
+    "353.cd62cb51.chunk.js.map": "/cars/static/js/353.cd62cb51.chunk.js.map",
     "310.40408377.chunk.js.map": "/cars/static/js/310.40408377.chunk.js.map",
     "214.183484e0.chunk.js.map": "/cars/static/js/214.183484e0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6cc20729.css",
-    "static/js/main.8717fa75.js"
+    "static/js/main.488b01f4.js"
   ]
 }
