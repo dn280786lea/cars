@@ -18,9 +18,10 @@
 }
 .car-photo {
   border-radius: 10px;
-  width: 300px;
-  height: 300px;
+  width: 290px;
+  height: 310px;
   padding: 24px;
+  object-fit: cover;
 }
 .car-details {
   width: 100%;
@@ -85,8 +86,7 @@
   mix-blend-mode: multiply;
 }
 
-.cards-submit,
-.loadmore {
+.cards-submit {
   font-weight: 700;
   line-height: 22px;
   text-decoration: none;
@@ -122,4 +122,20 @@
 .catalog-cars {
   display: block;
   margin-right: auto;
+}
+.loadmore {
+  border: 1px solid rgba(71, 84, 103, 0.2);
+  border-radius: 200px;
+  padding: 16px 32px;
+  width: 145px;
+  height: 56px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  color: #101828;
+  background-color: transparent;
+}
+.loadmore:hover {
+  border: 1px solid #e44848;
 }

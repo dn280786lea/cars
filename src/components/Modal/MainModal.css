@@ -19,6 +19,7 @@
 .car-photo-modal {
   width: 290px;
   height: 310px;
+  object-fit: cover;
 }
 .rating-modal-container {
   display: flex;

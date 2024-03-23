@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { getCarById } from '../../redux/operations';
 import Line from 'components/icons/Line';
 import Rating from '@mui/material/Rating';
+import {} from './Review.css';
+import Calendar from 'components/icons/Calendar';
 
 const MainModal = () => {
   const [car, setCar] = useState(null);
@@ -58,8 +60,11 @@ const MainModal = () => {
           <div className="form-row">
             <input type="email" name="email" placeholder="Email" />
           </div>
-          <div className="form-row">
-            <input type="date" name="date" placeholder="Booking date" />
+          <div className="input-container">
+            <input type="text" name="date" placeholder="Booking date" />
+            <div className="calendar-overlay">
+              <Calendar />
+            </div>
           </div>
           <div className="form-row">
             <textarea type="text" name="comment" placeholder="Comment" />

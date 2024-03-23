@@ -1,16 +1,18 @@
+.data-features {
+  display: flex;
+  width: 100%; /* Ширина каждого элемента */
+  box-sizing: border-box; /* Учитываем padding и border в ширине элемента */
+  gap: 24px;
+}
+
 .modal-cars-modal {
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 30px 0px;
-  text-align: left;
+  padding-right: 0px;
 }
 
-.data-features {
-  display: flex;
-  gap: 24px;
-  width: 902px;
-}
 .features-wrapper-modal {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -30,8 +32,8 @@
   border: 1px solid rgba(16, 24, 40, 0.2);
   border-radius: 10px;
   padding: 24px;
-  /*  width: 448px;
-  height: 532px; */
+  width: 448px;
+  height: 532px;
 }
 input[type='text'],
 input[type='email'],
@@ -39,7 +41,7 @@ input[type='date'],
 textarea {
   width: 100%;
   border-radius: 10px;
-  padding: 18px 337px 18px 18px;
+  padding: 18px;
   width: 400px;
   height: 56px;
   box-sizing: border-box;
@@ -59,4 +61,28 @@ textarea {
   height: 56px;
   margin-top: 16px;
   margin-bottom: 16px;
+}
+.data-container {
+  flex-direction: column;
+  gap: 14px;
+  display: flex;
+}
+.data-character {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.33;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.input-container {
+  position: relative;
+}
+
+.calendar-overlay {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
 }

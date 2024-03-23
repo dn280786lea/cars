@@ -5,18 +5,22 @@ import Cards from '../../components/Cards/Cards';
 import { fetchLocations } from '../../redux/operations';
 import './Catalog.css';
 import Location from '../../components/icons/Location';
+import Loader from '..//../components/Loader/Loader';
 
 const Catalog = () => {
   const [text, setText] = useState('');
   const [locations, setLocations] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchLocationsData = async () => {
       try {
         const uniqueLocations = await fetchLocations();
         setLocations(uniqueLocations);
+        setIsLoading(false);
       } catch (error) {
         console.error('Error fetching locations:', error);
+        setIsLoading(false);
       }
     };
 
@@ -27,7 +31,9 @@ const Catalog = () => {
     setText(event.target.value);
   };
 
-  return (
+  return isLoading ? (
+    <Loader />
+  ) : (
     <div className="catalog">
       <div className="catalog-content">
         <div className="left-content">
