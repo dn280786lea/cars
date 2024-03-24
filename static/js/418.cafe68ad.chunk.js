@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[418],{6418:function(e,t,r){r.r(t),r.d(t,{default:function(){return n}});var a=r(1087),c=r(184),n=function(){return(0,c.jsx)("div",{children:(0,c.jsxs)("p",{className:"favorite",children:["Please select your favorite cars in the"," ",(0,c.jsx)(a.rU,{to:"/catalog",children:"\u0421atalog"}),"."]})})}}}]);
-//# sourceMappingURL=418.cafe68ad.chunk.js.map
