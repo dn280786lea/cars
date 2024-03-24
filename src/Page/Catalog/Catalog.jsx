@@ -49,10 +49,7 @@ const Catalog = () => {
 
                 {locations.map((location, index) => (
                   <option key={index} value={location}>
-                    <p className="local-modal">
-                      <Location />
-                      {location}
-                    </p>
+                    {location}
                   </option>
                 ))}
               </select>

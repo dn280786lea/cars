@@ -59,7 +59,7 @@ home {
 }
 
 .background-image {
-  background-image: url('../../components/img/house-car.png');
+  background-image: url('../../components/img/house-car-min.png');
   background-size: cover;
   background-position: center;
   min-height: 100vh;

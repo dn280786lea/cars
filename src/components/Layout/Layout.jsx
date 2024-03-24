@@ -10,13 +10,13 @@ const Layout = () => {
         <div className="logo-container">
           <Alcove width={55} height={55} />
         </div>
-        <NavLink to="/" activeClassName="active" exact>
+        <NavLink to="/" activeclassname="active" exact>
           Home
         </NavLink>
-        <NavLink to="/catalog" activeClassName="active">
+        <NavLink to="/catalog" activeclassname="active">
           Catalog
         </NavLink>
-        <NavLink to="/favorites" activeClassName="active">
+        <NavLink to="/favorites" activeclassname="active">
           Favorite
         </NavLink>
       </nav>

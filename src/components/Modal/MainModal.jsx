@@ -41,16 +41,16 @@ const MainModal = () => {
                   <h2 className="title-cars">{car.name}</h2>
                   <div className="car-datail-review">
                     <div className="rating-modal-wrapper">
-                      <div className="rating-modal-container">
+                      <div className="rating-container">
                         <Rating
                           name="half-rating-read"
-                          value={car.rating.toFixed(1)}
+                          value={parseFloat(car.rating.toFixed(1))}
                           precision={0.1}
                           readOnly
                           max={1}
-                          className="rating-modal"
+                          className="rating"
                         />
-                        <p className="car_rating">{car.rating}</p>
+                        <p>Rating: {car.rating}</p>
                       </div>
                       <p className="car-reviews">
                         (Reviews: {countReviews(car.reviews)})
