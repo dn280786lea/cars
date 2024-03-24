@@ -6,3 +6,5 @@ export const selectIsLoading = state => state.cars.isLoading;
 export const selectCarById = (state, _id) => {
   return state.cars.find(car => car._id === _id);
 };
+
+export const selectFavorites = state => state.cars && state.cars.favorites;

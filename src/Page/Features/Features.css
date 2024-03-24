@@ -1,7 +1,7 @@
 .data-features {
   display: flex;
-  width: 100%; /* Ширина каждого элемента */
-  box-sizing: border-box; /* Учитываем padding и border в ширине элемента */
+  width: 100%; 
+  box-sizing: border-box; 
   gap: 24px;
 }
 

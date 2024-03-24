@@ -10,7 +10,7 @@ const Close = ({ width, height, fillColor, strokeColor }) => {
       <path
         d="M24 8L8 24"
         stroke="#101828"
-        strokeWdth="3"
+        strokeWidth="3"
         strokeLinecap="round"
         strokeLinejoin="round"
       />

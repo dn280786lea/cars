@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './Cards.css';
-import CardItems from '../CardList/CardItems';
+import CardItems from '../CardList/CardList';
 
 const Cards = () => {
   return (

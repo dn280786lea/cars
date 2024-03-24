@@ -1,0 +1,26 @@
+.favorite {
+  font-weight: 900;
+  font-size: 3dvh;
+  line-height: 1;
+  text-align: center;
+  color: #101828;
+  padding-top: 30px;
+}
+
+.bt-fav {
+  font-weight: 700;
+  line-height: 22px;
+  text-decoration: none;
+  padding: 8px;
+  font-size: 0.8rem;
+  color: white;
+  background-color: #e44848;
+  border-radius: 200px;
+  width: 173px;
+  height: 56px;
+  margin: 16px auto; /* Задаємо внутрішні відступи і автоматичну відстань від країв */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

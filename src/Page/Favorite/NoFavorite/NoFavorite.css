@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title_nofav {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 1;
+  color: #101828;
+  padding-top: 30px;
+}
+
+.text_nofav {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  color: #101828;
+  padding-top: 30px;
+}
+
+.bt_nofav {
+  font-weight: 700;
+  line-height: 22px;
+  text-decoration: none;
+  padding: 8px;
+  font-size: 0.8rem;
+  color: white;
+  background-color: #e44848;
+  border-radius: 200px;
+  width: 173px;
+  height: 56px;
+  text-align: center;
+  text-transform: uppercase;
+  outline: none;
+}

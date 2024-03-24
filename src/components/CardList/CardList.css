@@ -111,7 +111,7 @@
   stroke: black;
   cursor: pointer;
 }
-.heart:hover {
+.heart.active {
   fill: #e44848;
   stroke: #e44848;
 }

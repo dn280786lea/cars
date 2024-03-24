@@ -11,8 +11,6 @@ import {} from './Features.css';
 
 const Features = () => {
   const [car, setCar] = useState(null);
- 
-
 
   useEffect(() => {
     const fetchCar = async () => {
@@ -120,9 +118,7 @@ const Features = () => {
           <div className="form-row">
             <textarea type="text" name="comment" placeholder="Comment" />
           </div>
-          <button className="features-submit" type="submit">
-            Send
-          </button>
+          <button className="features-submit">Send</button>
         </form>
       </div>
     </div>
