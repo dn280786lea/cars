@@ -4,7 +4,6 @@ import Type from '../../components/Block/Type';
 import Cards from '../../components/Cards/Cards';
 import { fetchLocations } from '../../redux/operations';
 import './Catalog.css';
-import Location from '../../components/icons/Location';
 import Loader from '..//../components/Loader/Loader';
 
 const Catalog = () => {
