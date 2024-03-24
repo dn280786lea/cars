@@ -8,15 +8,11 @@ import Beds from 'components/icons/Petrol';
 import Bloom from 'components/icons/Bloom';
 import Line from 'components/icons/Line';
 import {} from './Features.css';
-import Calendar from 'components/icons/Calendar';
 
 const Features = () => {
   const [car, setCar] = useState(null);
-  const [date, setDate] = useState(new Date());
+ 
 
-  const handleDateChange = value => {
-    setDate(value);
-  };
 
   useEffect(() => {
     const fetchCar = async () => {
@@ -118,10 +114,8 @@ const Features = () => {
             <input type="email" name="email" placeholder="Email" />
           </div>
           <div className="input-container">
-            <input type="text" name="date" placeholder="Booking date" />
-            <div className="calendar-overlay">
-              <Calendar onChange={handleDateChange} value={date} />
-            </div>
+            <input type="date" name="date" />
+            <div className="calendar-overlay"></div>
           </div>
           <div className="form-row">
             <textarea type="text" name="comment" placeholder="Comment" />

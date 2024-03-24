@@ -1,4 +1,4 @@
-import { useState } from 'react';
+/* import { useState } from 'react';
 import NeedHelpModal from '../Modal/Modal';
 
 const ModalWrapper = () => {
@@ -20,3 +20,4 @@ const ModalWrapper = () => {
 };
 
 export default ModalWrapper;
+ */

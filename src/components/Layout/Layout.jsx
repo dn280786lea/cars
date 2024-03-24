@@ -8,15 +8,15 @@ const Layout = () => {
     <>
       <nav>
         <div className="logo-container">
-          <Alcove width={60} height={60} />
+          <Alcove width={55} height={55} />
         </div>
-        <NavLink to="/" activeclassname="active" exact>
+        <NavLink to="/" activeClassName="active" exact>
           Home
         </NavLink>
-        <NavLink to="/catalog" activeclassname="active" exact>
+        <NavLink to="/catalog" activeClassName="active">
           Catalog
         </NavLink>
-        <NavLink to="/favorites" activeclassname="active" exact>
+        <NavLink to="/favorites" activeClassName="active">
           Favorite
         </NavLink>
       </nav>

@@ -27,7 +27,7 @@ const Calendar = () => (
       stroke="#101828"
       strokeWidth="1.5"
       strokeLinecap="round"
-      stroke-Linejoin="round"
+      strokeLinejoin="round"
     />
     <path
       d="M2.5 8.33331H17.5"

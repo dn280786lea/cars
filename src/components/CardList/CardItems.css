@@ -134,6 +134,7 @@
   letter-spacing: -0.01em;
   color: #101828;
   background-color: transparent;
+  margin-top: 40px;
 }
 .loadmore:hover {
   border: 1px solid #e44848;

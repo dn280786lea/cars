@@ -1,4 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAllCars } from '../../redux/operations';
+import { selectCars } from '../../redux/selectors';
 import './CardItems.css';
 import NeedHelpModal from '../Modal/Modal';
 import Kitchen from 'components/icons/Kitchen';
@@ -9,30 +12,34 @@ import Beds from 'components/icons/Petrol';
 import Bloom from 'components/icons/Bloom';
 import Location from 'components/icons/Location';
 import Heart from 'components/icons/Heart';
-import { getAllCars } from '../../redux/operations';
 import Rating from '@mui/material/Rating';
-import Cards from 'components/Cards/Cards';
 import { Loader } from '../Loader/Loader';
 
 const CardItems = () => {
-  const [cars, setCars] = useState([]);
-  const [displayedCars, setDisplayedCars] = useState(4);
-  const [totalCars, setTotalCars] = useState(0);
+  const dispatch = useDispatch();
+  const cars = useSelector(selectCars);
   const [selectedCar, setSelectedCar] = useState(null);
   const [shownModal, setShownModal] = useState(false);
+  const [displayedCars, setDisplayedCars] = useState(4);
 
   useEffect(() => {
-    getAllCars(displayedCars, setTotalCars, setCars);
-  }, [displayedCars]);
+    dispatch(getAllCars());
+  }, [dispatch]);
 
   const countReviews = reviews => {
     return reviews.length;
   };
 
-  const loadMore = () => {
-    setDisplayedCars(displayedCars + 4);
+  const handleShowModal = carId => {
+    setSelectedCar(carId);
+    setShownModal(true);
   };
-  if (!Cards) {
+
+  const loadMore = () => {
+    setDisplayedCars(prev => prev + 4);
+  };
+
+  if (!cars) {
     return (
       <div>
         <Loader />
@@ -40,15 +47,10 @@ const CardItems = () => {
     );
   }
 
-  const handleShowModal = carId => {
-    setSelectedCar(carId);
-    setShownModal(true);
-  };
-
   return (
     <div className="catalog-cars" id="catalog">
       <div className="wrapper">
-        {cars.map(car => (
+        {cars.slice(0, displayedCars).map(car => (
           <div className="catalog-cars" key={car._id}>
             <div className="catalog-car">
               <div className="image-container">
@@ -135,17 +137,19 @@ const CardItems = () => {
             </div>
           </div>
         ))}
-        {displayedCars < totalCars && (
-          <button className="loadmore" onClick={loadMore}>
-            Load more
-          </button>
-        )}
         {shownModal && (
           <NeedHelpModal
             carId={selectedCar}
             setShowModal={setShownModal}
             onClose={() => setShownModal(false)}
           />
+        )}
+      </div>
+      <div>
+        {displayedCars < cars.length && (
+          <button className="loadmore" onClick={loadMore}>
+            Load more
+          </button>
         )}
       </div>
     </div>

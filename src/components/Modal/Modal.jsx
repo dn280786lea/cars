@@ -32,7 +32,6 @@ const NeedHelpModal = ({ setShowModal, onClose }) => {
       <div className="modal-help">
         <form onSubmit={handleSubmit} className="help-form">
           <button type="button" className="close-button" onClick={onClose}>
-            {' '}
             <Close />
           </button>
           <MainModal />
