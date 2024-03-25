@@ -110,6 +110,7 @@
   fill: fff;
   stroke: black;
   cursor: pointer;
+  background-color: transparent;
 }
 .heart.active {
   fill: #e44848;
