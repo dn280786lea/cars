@@ -1,7 +1,7 @@
 .data-features {
   display: flex;
-  width: 100%; 
-  box-sizing: border-box; 
+  width: 100%;
+  box-sizing: border-box;
   gap: 24px;
 }
 
@@ -60,6 +60,9 @@ textarea {
   height: 56px;
   margin-top: 16px;
   margin-bottom: 16px;
+}
+.features-submit:hover {
+  background-color: #e42828;
 }
 .data-container {
   flex-direction: column;

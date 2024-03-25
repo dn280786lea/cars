@@ -52,7 +52,6 @@
 }
 .rating-wrapper {
   display: flex;
-  gap: 16px;
 }
 
 .rating-container {
@@ -100,6 +99,10 @@
   margin-top: 16px;
   margin-bottom: 16px;
 }
+
+.cards-submit:hover {
+  background-color: #e42828;
+}
 .icon-container {
   width: 20px;
   height: 20px;
@@ -107,7 +110,7 @@
 }
 .heart {
   padding-left: 10px;
-  fill: fff;
+  fill: #fff;
   stroke: black;
   cursor: pointer;
   background-color: transparent;

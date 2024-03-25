@@ -38,7 +38,7 @@ const CardItems = ({ cars }) => {
             <div className="details-container">
               <div className="title-container">
                 <h2 className="title-cars">{car.name}</h2>
-                <h2 className="title-price">Price: ${car.price}</h2>
+                <h2 className="title-price">€ {car.price.toFixed(2)}</h2>
                 <button
                   className={`heart ${
                     favorites.some(item => item._id === car._id) ? 'active' : ''
@@ -62,9 +62,9 @@ const CardItems = ({ cars }) => {
                     max={1}
                     className="rating"
                   />
-                  <p>Rating: {car.rating}</p>
+                  <p>{car.rating}</p>
                 </div>
-                <p>Reviews: {countReviews(car.reviews)}</p>
+                <p>(Reviews: {countReviews(car.reviews)})</p>
               </div>
               <p style={{ marginTop: 0 }}>
                 <Location /> {car.location}
