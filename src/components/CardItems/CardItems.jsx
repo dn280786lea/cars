@@ -84,7 +84,6 @@ const CardItems = ({ cars }) => {
                   {car.transmission}
                 </div>
                 <div className="data-icons">
-                  {' '}
                   <span className="icon-container">
                     <Petrol />
                   </span>
