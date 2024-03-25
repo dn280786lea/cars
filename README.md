@@ -29,8 +29,8 @@ information, and a footer with the contact details of the app owner.
 3. When all the ads from the database are loaded, the `Load more` button
    disappears.
 4. When you click on the heart button on the ad card, it is added to the list of
-   favourites to the list of favourites, and the colour of the button changes to
-   blue.
+   favourites to the list of favourites, and the colour of the button -heart
+   changes to red.
 5. When the page refreshes, the end result of the user's actions is recorded
    (favourites cars remain in the list of favourites). Implemented using local
    storage.
@@ -60,18 +60,18 @@ Ukraine. for rent in Ukraine. The application consists of 3 pages:
 
 - home page with a general description of the services provided by the company.
   Styling and design is at your discretion.
-- a page containing a catalogue
-- a page with ads that have been added to the user's favourites The external The
+- a page containing a catalog
+- a page with ads that have been added to the user's favourite The external The
   appearance of the application should consist of a sidebar and a viewing area.
 
 Create a routing using React Router. The application should have the following
 routes:
 
-- `"/"` - the home page with a general description of the services provided by
-  the company
-- `"/catalogue"` - a page containing a catalogue of cars of different
+- `"/home"` - the home page with a general description of the services provided
+  by the company
+- `"/catalog"` - a page containing a catalogue of cars of different
   configurations
-- `"/favourites"` - a page with ads that have been added by the user to
+- `"/favourite"` - a page with ads that have been added by the user to
   favourites
 
 Advert
