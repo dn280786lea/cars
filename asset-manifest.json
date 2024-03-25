@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/cars/static/css/main.77d877bd.css",
-    "main.js": "/cars/static/js/main.62c7a7de.js",
-    "static/css/602.438968bb.chunk.css": "/cars/static/css/602.438968bb.chunk.css",
+    "main.js": "/cars/static/js/main.b186085d.js",
+    "static/css/602.b1256ae7.chunk.css": "/cars/static/css/602.b1256ae7.chunk.css",
     "static/js/602.9eeb1ecc.chunk.js": "/cars/static/js/602.9eeb1ecc.chunk.js",
     "static/css/21.c8c10fc1.chunk.css": "/cars/static/css/21.c8c10fc1.chunk.css",
     "static/js/21.42b2deaa.chunk.js": "/cars/static/js/21.42b2deaa.chunk.js",
@@ -12,11 +12,11 @@
     "static/js/557.d21ecd91.chunk.js": "/cars/static/js/557.d21ecd91.chunk.js",
     "static/js/562.49aa385f.chunk.js": "/cars/static/js/562.49aa385f.chunk.js",
     "static/js/524.bf541872.chunk.js": "/cars/static/js/524.bf541872.chunk.js",
-    "static/media/house-car-min.png": "/cars/static/media/house-car-min.06101e1a7599a91563ef.png",
+    "static/media/house-car-minimum.avif": "/cars/static/media/house-car-minimum.3deb850e8816cce4a8ca.avif",
     "index.html": "/cars/index.html",
     "main.77d877bd.css.map": "/cars/static/css/main.77d877bd.css.map",
-    "main.62c7a7de.js.map": "/cars/static/js/main.62c7a7de.js.map",
-    "602.438968bb.chunk.css.map": "/cars/static/css/602.438968bb.chunk.css.map",
+    "main.b186085d.js.map": "/cars/static/js/main.b186085d.js.map",
+    "602.b1256ae7.chunk.css.map": "/cars/static/css/602.b1256ae7.chunk.css.map",
     "602.9eeb1ecc.chunk.js.map": "/cars/static/js/602.9eeb1ecc.chunk.js.map",
     "21.c8c10fc1.chunk.css.map": "/cars/static/css/21.c8c10fc1.chunk.css.map",
     "21.42b2deaa.chunk.js.map": "/cars/static/js/21.42b2deaa.chunk.js.map",
@@ -29,6 +29,6 @@
   },
   "entrypoints": [
     "static/css/main.77d877bd.css",
-    "static/js/main.62c7a7de.js"
+    "static/js/main.b186085d.js"
   ]
 }
