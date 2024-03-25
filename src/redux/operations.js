@@ -22,7 +22,6 @@ export const getCarById = async id => {
       `https://65f98457df1514524611d93d.mockapi.io/adverts/cars/${id}`
     );
     return response.data;
-    console.log(response);
   } catch (error) {
     console.error(`Error fetching car with id ${id}:`, error);
     return null;
