@@ -31,10 +31,10 @@ const CardItems = ({ cars }) => {
     <div className="wrapper">
       {cars.map(car => (
         <div className="catalog-cars" key={car._id}>
-          <div className="catalog-car">
-            <div className="image-container">
+          <ul className="catalog-car">
+            <li className="image-container">
               <img className="car-photo" src={car.gallery[0]} alt={car.name} />
-            </div>
+            </li>
             <div className="details-container">
               <div className="title-container">
                 <h2 className="title-cars">{car.name}</h2>
@@ -54,22 +54,26 @@ const CardItems = ({ cars }) => {
               </div>
               <div className="rating-wrapper">
                 <div className="rating-container">
-                  <Rating
-                    name="half-rating-read"
-                    value={parseFloat(car.rating.toFixed(1))}
-                    precision={0.1}
-                    readOnly
-                    max={1}
-                    className="rating"
-                  />
+                  <div className="rating">
+                    <Rating
+                      name="half-rating-read"
+                      value={parseFloat(car.rating.toFixed(1))}
+                      precision={0.1}
+                      readOnly
+                      max={1}
+                    />
+                  </div>
                   <p>{car.rating}</p>
+                  <p>(Reviews: {countReviews(car.reviews)})</p>
                 </div>
-                <p>(Reviews: {countReviews(car.reviews)})</p>
+
+                <div className="location-info">
+                  <p>
+                    <Location /> {car.location}
+                  </p>
+                </div>
               </div>
-              <p style={{ marginTop: 0 }}>
-                <Location /> {car.location}
-              </p>
-              <p className="description">Description: {car.description}</p>
+              <li className="description">Description: {car.description}</li>
               <div className="detail-container">
                 <div className="data-icons">
                   <span className="icon-container">
@@ -117,7 +121,7 @@ const CardItems = ({ cars }) => {
                 Show more
               </button>
             </div>
-          </div>
+          </ul>
         </div>
       ))}
       {shownModal && (

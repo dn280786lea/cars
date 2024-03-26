@@ -1,26 +1,31 @@
 .catalog-car {
   display: flex;
   flex-direction: row;
-  gap: 24px;
+  margin-bottom: 32px;
   border-radius: 20px;
   border: 1px solid rgba(16, 24, 40, 0.2);
   background: #fff;
-  width: 888px;
+  width: 100%;
+  padding: 24px;
 }
+.local {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
 .wrapper {
   display: flex;
-  width: 526px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
   flex-shrink: 0;
   margin-top: 16px;
 }
 .car-photo {
   border-radius: 10px;
   width: 290px;
-  height: 310px;
-  padding: 24px;
+  height: 100%;
+  padding-right: 24px;
   object-fit: cover;
 }
 .car-details {
@@ -43,6 +48,8 @@
   font-size: 24px;
   font-weight: 600;
   line-height: 1.25;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 .title-price {
   font-size: 24px;
@@ -52,6 +59,7 @@
 }
 .rating-wrapper {
   display: flex;
+  margin-bottom: 24px;
 }
 
 .rating-container {
@@ -60,6 +68,9 @@
   text-decoration-line: underline;
 }
 
+.location-info {
+  margin-left: 10px;
+}
 .description {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -73,6 +84,7 @@
   flex-wrap: wrap;
   gap: 8px;
   align-self: stretch;
+  margin-top: 24px;
 }
 
 .data-icons {
@@ -96,8 +108,7 @@
   border-radius: 200px;
   width: 173px;
   height: 56px;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: 20px;
 }
 
 .cards-submit:hover {
@@ -123,10 +134,7 @@
 .rating {
   margin-right: 5px;
 }
-.catalog-cars {
-  display: block;
-  margin-right: auto;
-}
+
 .loadmore {
   border: 1px solid rgba(71, 84, 103, 0.2);
   border-radius: 200px;

@@ -18,9 +18,12 @@
   border-radius: 200px;
   width: 173px;
   height: 56px;
-  margin: 16px auto; /* Задаємо внутрішні відступи і автоматичну відстань від країв */
+  margin: 16px auto;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+.bt-fav:hover {
+  background-color: #e42828;
 }

@@ -50,6 +50,9 @@
   border-radius: 20px;
   width: 140px;
 }
+.home-submit:hover {
+  background-color: #e42828;
+}
 .home-sub {
   margin-top: 20px;
   text-align: center;
