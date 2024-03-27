@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/cars/static/css/main.77d877bd.css",
-    "main.js": "/cars/static/js/main.59a0d29a.js",
+    "main.js": "/cars/static/js/main.5a001a01.js",
     "static/css/602.01ea57f0.chunk.css": "/cars/static/css/602.01ea57f0.chunk.css",
     "static/js/602.9eeb1ecc.chunk.js": "/cars/static/js/602.9eeb1ecc.chunk.js",
-    "static/css/599.2e3dc045.chunk.css": "/cars/static/css/599.2e3dc045.chunk.css",
+    "static/css/599.aeace15c.chunk.css": "/cars/static/css/599.aeace15c.chunk.css",
     "static/js/599.a29c0dda.chunk.js": "/cars/static/js/599.a29c0dda.chunk.js",
-    "static/css/977.4b712965.chunk.css": "/cars/static/css/977.4b712965.chunk.css",
+    "static/css/977.b0dd6d32.chunk.css": "/cars/static/css/977.b0dd6d32.chunk.css",
     "static/js/977.e5100eff.chunk.js": "/cars/static/js/977.e5100eff.chunk.js",
     "static/css/557.3e599e47.chunk.css": "/cars/static/css/557.3e599e47.chunk.css",
     "static/js/557.d21ecd91.chunk.js": "/cars/static/js/557.d21ecd91.chunk.js",
@@ -15,12 +15,12 @@
     "static/media/house-car-minimum.avif": "/cars/static/media/house-car-minimum.3deb850e8816cce4a8ca.avif",
     "index.html": "/cars/index.html",
     "main.77d877bd.css.map": "/cars/static/css/main.77d877bd.css.map",
-    "main.59a0d29a.js.map": "/cars/static/js/main.59a0d29a.js.map",
+    "main.5a001a01.js.map": "/cars/static/js/main.5a001a01.js.map",
     "602.01ea57f0.chunk.css.map": "/cars/static/css/602.01ea57f0.chunk.css.map",
     "602.9eeb1ecc.chunk.js.map": "/cars/static/js/602.9eeb1ecc.chunk.js.map",
-    "599.2e3dc045.chunk.css.map": "/cars/static/css/599.2e3dc045.chunk.css.map",
+    "599.aeace15c.chunk.css.map": "/cars/static/css/599.aeace15c.chunk.css.map",
     "599.a29c0dda.chunk.js.map": "/cars/static/js/599.a29c0dda.chunk.js.map",
-    "977.4b712965.chunk.css.map": "/cars/static/css/977.4b712965.chunk.css.map",
+    "977.b0dd6d32.chunk.css.map": "/cars/static/css/977.b0dd6d32.chunk.css.map",
     "977.e5100eff.chunk.js.map": "/cars/static/js/977.e5100eff.chunk.js.map",
     "557.3e599e47.chunk.css.map": "/cars/static/css/557.3e599e47.chunk.css.map",
     "557.d21ecd91.chunk.js.map": "/cars/static/js/557.d21ecd91.chunk.js.map",
@@ -29,6 +29,6 @@
   },
   "entrypoints": [
     "static/css/main.77d877bd.css",
-    "static/js/main.59a0d29a.js"
+    "static/js/main.5a001a01.js"
   ]
 }
