@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { getCarById } from '../../redux/operations';
+import React, { useState } from 'react';
 import Kitchen from 'components/icons/Kitchen';
 import Adults from 'components/icons/Adults';
 import Arrow from 'components/icons/Arrow';
@@ -7,28 +6,19 @@ import Petrol from 'components/icons/Petrol';
 import Beds from 'components/icons/Petrol';
 import Bloom from 'components/icons/Bloom';
 import Line from 'components/icons/Line';
-import {} from './Features.css';
+import './Features.css';
 
-const Features = () => {
+const Features = ({ carId }) => {
   const [car, setCar] = useState(null);
 
-  useEffect(() => {
-    const fetchCar = async () => {
-      try {
-        const carData = await getCarById('4');
-        setCar(carData);
-      } catch (error) {
-        console.error('Error fetching car information:', error);
-        setCar(null);
-      }
-    };
-    fetchCar();
-  }, []);
-
   if (!car) {
+    fetch(`https://65f98457df1514524611d93d.mockapi.io/adverts/cars//${carId}`)
+      .then(response => response.json())
+      .then(data => setCar(data))
+      .catch(error => console.error('Error fetching car data:', error));
+
     return <div>Loading car...</div>;
   }
-
   return (
     <div className="features-detail-cars" id="catalog">
       <div className="data-features">

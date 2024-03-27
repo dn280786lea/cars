@@ -22,8 +22,9 @@ const CardItems = ({ cars }) => {
   const countReviews = reviews => {
     return reviews.length;
   };
-  const handleShowModal = carId => {
-    setSelectedCar(carId);
+
+  const handleShowModal = car => {
+    setSelectedCar(car);
     setShownModal(true);
   };
 
@@ -116,7 +117,7 @@ const CardItems = ({ cars }) => {
               <button
                 className="cards-submit"
                 type="button"
-                onClick={() => handleShowModal(car._id)}
+                onClick={() => handleShowModal(car)}
               >
                 Show more
               </button>
@@ -126,7 +127,7 @@ const CardItems = ({ cars }) => {
       ))}
       {shownModal && (
         <NeedHelpModal
-          carId={selectedCar}
+          car={selectedCar}
           setShowModal={setShownModal}
           onClose={() => setShownModal(false)}
         />

@@ -2,7 +2,8 @@ import React from 'react';
 import Review from '../../Page/Review/Review';
 import Features from '../../Page/Features/Features';
 import {} from './Tab.css';
-const Tabs = ({ card, activeTab, setActiveTab }) => {
+
+const Tabs = ({ carId, activeTab, setActiveTab }) => {
   return (
     <div className="tab">
       <ul className="tab-list">
@@ -27,11 +28,11 @@ const Tabs = ({ card, activeTab, setActiveTab }) => {
       </ul>
       {activeTab === 'features' ? (
         <div>
-          <Features card={card} />
+          <Features carId={carId} />
         </div>
       ) : (
         <div>
-          <Review card={card} />
+          <Review carId={carId} />
         </div>
       )}
     </div>
