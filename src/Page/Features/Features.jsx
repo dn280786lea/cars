@@ -7,6 +7,7 @@ import Beds from 'components/icons/Petrol';
 import Bloom from 'components/icons/Bloom';
 import Line from 'components/icons/Line';
 import './Features.css';
+import BookForm from '../../components/BookForm/BookForm';
 
 const Features = ({ carId }) => {
   const [car, setCar] = useState(null);
@@ -92,24 +93,7 @@ const Features = ({ carId }) => {
             </li>
           </ul>
         </div>
-        <form action="form" className="form-container">
-          <h2>Book your campervan now</h2>
-          <p>Stay connected! We are always ready to help you.</p>
-          <div className="form-row">
-            <input type="text" name="text" placeholder="Name" />
-          </div>
-          <div className="form-row">
-            <input type="email" name="email" placeholder="Email" />
-          </div>
-          <div className="input-container">
-            <input type="date" name="date" />
-            <div className="calendar-overlay"></div>
-          </div>
-          <div className="form-row">
-            <textarea type="text" name="comment" placeholder="Comment" />
-          </div>
-          <button className="features-submit">Send</button>
-        </form>
+        <BookForm />
       </div>
     </div>
   );

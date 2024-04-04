@@ -4,7 +4,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5); /* Затемнення */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +21,7 @@
   padding: 15px 30px 15px 30px;
   width: 982px;
   height: 720px;
-  overflow-y: auto; /* Прокрутка, якщо контент перевищує розмір модального вікна */
+  overflow-y: auto;
 }
 .close-button {
   position: absolute;
