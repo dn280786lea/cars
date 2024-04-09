@@ -10,7 +10,7 @@ const Layout = () => {
         <div className="logo-container">
           <Alcove width={55} height={55} />
         </div>
-        <NavLink to="/" activeclassname="active" exact>
+        <NavLink to="/" activeclassname="active">
           Home
         </NavLink>
         <NavLink to="/catalog" activeclassname="active">

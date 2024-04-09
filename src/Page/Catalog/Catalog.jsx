@@ -37,22 +37,20 @@ const Catalog = () => {
       <div className="catalog-content">
         <div className="left-content">
           <div className="location">
-            <form action="">
-              <h3>Location</h3>
-              <select
-                className="location_input"
-                value={text}
-                onChange={handleChange}
-              >
-                <option value="">Select location</option>
+            <h3>Location</h3>
+            <select
+              className="location_input"
+              value={text}
+              onChange={handleChange}
+            >
+              <option value="">Select location</option>
 
-                {locations.map((location, index) => (
-                  <option key={index} value={location}>
-                    {location}
-                  </option>
-                ))}
-              </select>
-            </form>
+              {locations.map((location, index) => (
+                <option key={index} value={location}>
+                  {location}
+                </option>
+              ))}
+            </select>
           </div>
           <div className="block">
             <Block />
@@ -60,11 +58,7 @@ const Catalog = () => {
           <div className="type">
             <Type />
           </div>
-          <button
-            className="catalog-submit"
-            type="submit"
-            /*  onSubmit={handleSubmit} */
-          >
+          <button className="catalog-submit" type="submit">
             Search
           </button>
         </div>
